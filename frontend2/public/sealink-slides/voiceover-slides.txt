@@ -1,0 +1,29 @@
+Sealink — Slides Voice-Over (Friendly-Professional, US accent, medium pace)
+
+0:00–0:20 — Opening
+Welcome to Sealink — your decentralized link‑in‑bio powered by the Sui blockchain and Walrus storage. In the next five minutes, I’ll show how creators can truly own their profile, receive private messages, and showcase NFTs — all with a smooth, web‑native experience.
+
+0:20–0:50 — The problem
+Traditional link-in-bio tools are centralized and fragile. If a platform changes its rules, creators can lose reach and data overnight. Audiences also expect privacy when reaching out to public figures. Sealink brings ownership and privacy together, without sacrificing usability.
+
+0:50–1:40 — The solution
+Sealink is like LinkTree, but on-chain. Your profile is anchored on Sui and references a Walrus blob for fast, consistent reads across devices. Fans can send encrypted, anonymous messages; the chain stores lightweight references, while the message content lives in Walrus for performance and scale. Creators can mint and present NFTs, including free drops and paid items with wallet flows.
+
+1:40–2:35 — Core features
+On‑chain profiles: publish a username, bio, avatar, and your links. Your profile is verifiable on Sui, and the blob reference keeps content portable and easy to update.
+Sealed messaging: fans write messages, optionally anonymously. The app encrypts the content and uploads it to Walrus. Only a compact reference is recorded on‑chain. On the creator side, the inbox fetches the content on demand.
+NFTs and marketplace: showcase media hosted via Walrus, share free mints instantly, and guide paid purchases with a familiar Sui wallet flow.
+
+2:35–3:35 — Architecture overview
+Under the hood, Sealink uses Move smart contracts on Sui for profile records, links, and sealed message references. Walrus handles blob storage — content‑addressed, web‑scale, with simple APIs. The frontend is a Vite + React app using Mysten’s dapp‑kit for wallet connectivity. We upload and fetch Walrus blobs directly, and batch‑retrieve message content for responsiveness while keeping the chain lean and auditable.
+
+3:35–4:35 — Creator journey
+A creator connects a Sui wallet and sets up a profile — username, bio, avatar, and links. The profile data is uploaded to Walrus and referenced by the on‑chain profile. Visitors instantly see the profile and optional NFT gallery.
+To contact the creator, a visitor writes a message, chooses anonymous or named, and clicks send. The payload is encrypted client‑side, stored as a Walrus blob, and the on‑chain message box stores the reference. The creator’s inbox loads messages on demand.
+For NFTs, creators prepare media and metadata, store assets via Walrus, and present items in a gallery. Free drops are one click; paid items follow a wallet confirmation flow.
+
+4:35–4:50 — Why it matters
+Sealink blends verifiable ownership with privacy‑first communication and creator commerce. It’s portable across devices, resilient to platform risks, and designed to feel like the modern web.
+
+4:50–5:00 — Close
+That’s Sealink. Own your profile, keep conversations private with sealed blobs, and grow your creative business with NFTs. Thanks for watching.

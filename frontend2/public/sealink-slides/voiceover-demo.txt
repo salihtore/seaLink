@@ -1,0 +1,31 @@
+Sealink — Screen Recording Voice-Over (Friendly-Professional, US accent, medium pace)
+
+0:00–0:15 — Hook
+This is Sealink — a decentralized LinkTree on Sui and Walrus. I’ll walk through setup, private messaging, and NFTs in five minutes.
+
+0:15–0:45 — Connect wallet
+From the homepage, click Connect Wallet. Choose your wallet and approve. Once connected, your address appears in the header and the app is ready to go.
+
+0:45–1:25 — Create profile
+Open Create Profile. Enter a username and a short bio. Add a few links — your website, socials, or a store page. Add an avatar if you like, then click Create. Behind the scenes, the profile data is uploaded to Walrus as a blob and referenced by your on‑chain profile record. When it’s finished, we land on your public profile view.
+
+1:25–1:55 — View profile
+Here’s your public profile: avatar, bio, and links. The structure is on‑chain, while content is fetched via Walrus for fast, consistent reads across devices.
+
+1:55–2:35 — Send a sealed message (visitor)
+Open the message panel. Type a note to the creator. You can send it anonymously or include a name. Click Send. The app encrypts the payload client‑side and uploads it to Walrus, while the chain stores a compact reference. The message is delivered without exposing the sender’s identity.
+
+2:35–3:10 — Read messages (creator)
+Now on the creator’s side, open My Messages. The inbox loads message content using the stored references and shows it in the thread. You can scan messages quickly and fetch the content only when you need it.
+
+3:10–3:50 — Create an NFT
+Go to Create NFT. Select media, add a title and description, and set a price — or zero for a free drop. Click Create. The media and metadata are stored via Walrus. Your NFT appears in the gallery, ready to share with fans.
+
+3:50–4:30 — Marketplace flow
+Open the Marketplace. Filter items and view details. Claim a free NFT with one click. For a paid item, start the purchase and follow the wallet flow to confirm the transaction. Ownership updates, and your item shows as purchased.
+
+4:30–4:55 — Recap
+In a few steps, we created an on‑chain profile, received private, sealed messages, and published NFTs. Walrus powers the content storage; Sui provides verifiable ownership and wallet‑native UX.
+
+4:55–5:00 — Close
+That’s Sealink — portable, privacy‑first, and creator‑friendly.
