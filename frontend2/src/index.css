@@ -1,0 +1,413 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* App Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: 2px solid #764ba2;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+}
+
+.wallet-connect {
+  margin-top: 1rem;
+}
+
+.wallet-connect button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+}
+
+.wallet-connect button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wallet-info {
+  margin-top: 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.main-content {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.create-profile {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #213547;
+}
+
+.create-profile h2 {
+  margin-top: 0;
+  color: #667eea;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #213547;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #213547;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.create-profile button {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.create-profile button:hover:not(:disabled) {
+  background-color: #5568d3;
+}
+
+.create-profile button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-view {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #213547;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #667eea;
+}
+
+.profile-header h1 {
+  margin: 0;
+  color: #667eea;
+  font-size: 2rem;
+}
+
+.profile-header .bio {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.link-card {
+  display: block;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.profile-footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Sealed Messaging Styles */
+
+.sealed-messaging {
+  margin-top: 2rem;
+}
+
+.messaging-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messaging-container h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.messaging-container .subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.messaging-container .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.messaging-container .form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.messaging-container .form-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.messaging-container .form-group input[type="text"],
+.messaging-container .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #213547;
+  box-sizing: border-box;
+}
+
+.messaging-container .form-group input[type="text"]:focus,
+.messaging-container .form-group textarea:focus {
+  outline: none;
+  border-color: white;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.messaging-container .form-group small {
+  display: block;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+.messaging-container button[type="submit"] {
+  width: 100%;
+  background-color: white;
+  color: #667eea;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.messaging-container button[type="submit"]:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.messaging-container button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.messaging-container .warning-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.messaging-container .warning-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Wallet Connect Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(76, 175, 80, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+  }
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .profile-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    margin: 1rem auto;
+  }
+
+  .create-profile,
+  .profile-view {
+    padding: 1.5rem;
+  }
+
+  .messaging-container {
+    padding: 1.5rem;
+  }
+
+  .messaging-container h3 {
+    font-size: 1.25rem;
+  }
+}
