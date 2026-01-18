@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sealink Slides</title>
+  <style>
+    :root { --bg: #0f172a; --fg: #e2e8f0; --muted: #94a3b8; --primary: #667eea; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body { background: var(--bg); color: var(--fg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .deck { height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
+    header, footer { padding: 12px 20px; color: var(--muted); font-size: 14px; }
+    header strong { color: var(--fg); }
+    .slide { display: none; padding: 6vh 8vw; }
+    .slide.active { display: block; }
+    h1, h2 { margin: 0 0 16px; color: var(--fg); }
+    h1 { font-size: 48px; }
+    h2 { font-size: 28px; }
+    p, li { color: var(--muted); font-size: 20px; line-height: 1.6; }
+    .bullets { margin: 0; padding-left: 1em; }
+    .badge { background: rgba(102,126,234,.15); color: #c3d0ff; border: 1px solid rgba(102,126,234,.35); padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+    .controls { display: flex; gap: 8px; justify-content: center; padding: 10px; }
+    button { background: #1f2937; color: var(--fg); border: 1px solid #334155; padding: 10px 14px; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    button:hover { background: #111827; }
+    .progress { height: 4px; background: #1e293b; }
+    .bar { height: 100%; width: 0; background: linear-gradient(90deg, #667eea, #64b5f6); transition: width .2s ease; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card { background: #0b1220; border: 1px solid #1b2742; border-radius: 12px; padding: 14px; }
+  </style>
+</head>
+<body>
+  <div class="deck">
+    <header>
+      <span class="badge">Sealink</span>
+      <strong>Decentralized LinkTree on Sui + Walrus</strong>
+    </header>
+    <main>
+      <section class="slide active">
+        <h1>Sealink</h1>
+        <p>Decentralized LinkTree on <strong>Sui</strong> + <strong>Walrus</strong></p>
+        <ul class="bullets">
+          <li>Own your profile and links</li>
+          <li>End‑to‑end encrypted, anonymous messaging</li>
+          <li>NFT gallery and marketplace</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>The problem</h2>
+        <ul class="bullets">
+          <li>Centralized link tools are fragile and siloed</li>
+          <li>Creators risk losing reach and data</li>
+          <li>Audiences expect privacy when contacting creators</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>The solution</h2>
+        <ul class="bullets">
+          <li>On‑chain profile anchored on Sui</li>
+          <li>Walrus blobs for fast, portable content</li>
+          <li>Encrypted, anonymous messages with on‑chain references</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Architecture</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Smart contracts</h3>
+            <p>Move modules for profiles, links, message refs</p>
+          </div>
+          <div class="card">
+            <h3>Storage</h3>
+            <p>Walrus content‑addressed blobs for media and messages</p>
+          </div>
+          <div class="card">
+            <h3>Frontend</h3>
+            <p>React + Vite, Mysten dapp‑kit, Walrus APIs</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <h2>On‑chain Profiles</h2>
+        <ul class="bullets">
+          <li>Username, bio, avatar, themed links</li>
+          <li>Walrus blob reference for cross‑device reads</li>
+          <li>Portable and update‑friendly</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Sealed Messaging</h2>
+        <ul class="bullets">
+          <li>Anonymous or named messages</li>
+          <li>Client‑side encryption, Walrus storage</li>
+          <li>Only references on‑chain</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>NFTs & Marketplace</h2>
+        <ul class="bullets">
+          <li>Media and metadata stored via Walrus</li>
+          <li>Free drops and paid items</li>
+          <li>Wallet‑native purchase flows</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Developer view</h2>
+        <ul class="bullets">
+          <li>Move contracts, Sui dapp‑kit</li>
+          <li>Walrus upload/fetch API, batch fetch</li>
+          <li>ENV flags for package/registry IDs</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>User journey</h2>
+        <ul class="bullets">
+          <li>Connect wallet → create profile</li>
+          <li>Visitors send sealed messages</li>
+          <li>Mint and showcase NFTs</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Security & Privacy</h2>
+        <ul class="bullets">
+          <li>On‑chain: identifiers and references</li>
+          <li>Walrus: encrypted payloads and media</li>
+          <li>Production: audited crypto and key mgmt</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Roadmap</h2>
+        <ul class="bullets">
+          <li>Harden cryptography + key management</li>
+          <li>Full on‑chain NFT mint flows</li>
+          <li>Moderation tooling and reporting</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <h2>Call to action</h2>
+        <ul class="bullets">
+          <li>Try the demo</li>
+          <li>Share feedback</li>
+          <li>Contribute on-chain and frontend</li>
+        </ul>
+      </section>
+    </main>
+    <div class="progress"><div class="bar"></div></div>
+    <footer>
+      Built with Sui, Walrus, and Mysten dapp‑kit. Part of Walrus Hackathon.
+    </footer>
+    <div class="controls">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const bar = document.querySelector('.bar');
+    let idx = 0;
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      bar.style.width = ((idx + 1) / slides.length) * 100 + '%';
+      location.hash = '#' + (idx + 1);
+    }
+
+    function go(n) {
+      idx = (n + slides.length) % slides.length;
+      update();
+    }
+
+    document.getElementById('prev').onclick = () => go(idx - 1);
+    document.getElementById('next').onclick = () => go(idx + 1);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key.toLowerCase() === 'l') go(idx + 1);
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key.toLowerCase() === 'h') go(idx - 1);
+    });
+
+    if (location.hash) {
+      const n = parseInt(location.hash.slice(1), 10);
+      if (!Number.isNaN(n)) idx = Math.min(Math.max(n - 1, 0), slides.length - 1);
+    }
+
+    update();
+  </script>
+</body>
+</html>

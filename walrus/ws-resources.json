@@ -1,0 +1,13 @@
+{
+  "site_name": "SeaLink - On-Chain LinkTree",
+  "object_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "description": "Decentralized LinkTree with encrypted messaging and NFT marketplace",
+  "version": "1.0.0",
+  "features": [
+    "On-chain profiles",
+    "Encrypted messaging",
+    "NFT marketplace", 
+    "SUI token integration",
+    "Walrus storage"
+  ]
+}

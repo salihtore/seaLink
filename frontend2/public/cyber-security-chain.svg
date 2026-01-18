@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="chainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d81b60" />
+      <stop offset="100%" stop-color="#2196f3" />
+    </linearGradient>
+    <linearGradient id="lockBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d47a1" />
+      <stop offset="100%" stop-color="#42a5f5" />
+    </linearGradient>
+    <linearGradient id="lockShackle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eceff1" />
+      <stop offset="100%" stop-color="#90a4ae" />
+    </linearGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bbdefb" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d47a1" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="diagonalClip">
+      <path d="M0 80 L640 0 L640 320 L0 400 Z" />
+    </clipPath>
+  </defs>
+
+  <rect width="640" height="400" fill="#090b1a" />
+
+  <g clip-path="url(#diagonalClip)">
+    <rect width="640" height="400" fill="#101b3a" opacity="0.6" />
+    <path d="M-40 200 Q 120 120 240 200 T 520 200 T 760 200" stroke="#263859" stroke-width="2" fill="none" opacity="0.5" />
+    <path d="M-40 250 Q 120 330 240 250 T 520 250 T 760 250" stroke="#1f2e4b" stroke-width="2" fill="none" opacity="0.5" />
+  </g>
+
+  <g fill="none" stroke="url(#chainGradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M110 150 C190 70, 270 70, 330 150" />
+    <path d="M330 150 C390 230, 470 230, 550 150" />
+  </g>
+
+  <g fill="none" stroke="url(#chainGradient)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <path d="M110 240 C190 320, 270 320, 330 240" />
+    <path d="M330 240 C390 160, 470 160, 550 240" />
+  </g>
+
+  <g opacity="0.95" transform="translate(245 110)">
+    <path d="M75 0 C45 0 20 25 20 55 L20 110 C20 122 30 132 42 132 L108 132 C120 132 130 122 130 110 L130 55 C130 25 105 0 75 0 Z" fill="url(#lockShackle)" />
+    <rect x="28" y="68" width="94" height="90" rx="16" fill="url(#lockBody)" />
+    <path d="M75 88 A20 20 0 1 0 75 128 A20 20 0 1 0 75 88 Z" fill="#0a2540" />
+    <rect x="67" y="110" width="16" height="28" rx="8" fill="#eceff1" />
+  </g>
+
+  <g stroke="#64b5f6" stroke-width="2" stroke-dasharray="6 10" opacity="0.7">
+    <path d="M140 60 L200 120 L160 180 L220 240 L180 300" />
+    <path d="M460 60 L400 120 L440 180 L380 240 L420 300" />
+  </g>
+
+  <g>
+    <circle cx="120" cy="60" r="32" fill="url(#nodeGlow)" />
+    <circle cx="520" cy="60" r="32" fill="url(#nodeGlow)" />
+    <circle cx="120" cy="320" r="32" fill="url(#nodeGlow)" />
+    <circle cx="520" cy="320" r="32" fill="url(#nodeGlow)" />
+    <circle cx="320" cy="40" r="24" fill="url(#nodeGlow)" />
+    <circle cx="320" cy="360" r="24" fill="url(#nodeGlow)" />
+  </g>
+
+  <g fill="#42a5f5" font-family="'Orbitron', sans-serif" text-anchor="middle" opacity="0.8">
+    <text x="320" y="368" font-size="18">Digital Trust Chain</text>
+  </g>
+
+  <g stroke="#82b1ff" stroke-width="1.5" opacity="0.6">
+    <path d="M120 60 Q 320 110 520 60" />
+    <path d="M120 320 Q 320 270 520 320" />
+    <path d="M120 60 Q 100 200 120 320" />
+    <path d="M520 60 Q 540 200 520 320" />
+  </g>
+
+  <g fill="none" stroke="#1de9b6" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5">
+    <path d="M120 60 C160 140, 240 200, 320 200" />
+    <path d="M520 60 C480 140, 400 200, 320 200" />
+    <path d="M120 320 C160 240, 240 200, 320 200" />
+    <path d="M520 320 C480 240, 400 200, 320 200" />
+  </g>
+</svg>

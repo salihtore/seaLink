@@ -1,0 +1,25 @@
+# Frontend
+node_modules/
+dist/
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Move
+build/
+target/
+.sui/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Walrus
+*.b36
